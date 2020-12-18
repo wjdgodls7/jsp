@@ -1,0 +1,147 @@
+@charset 'UTD-8';
+
+html{
+    font-size: 16px;
+    /* em 배수 rem 마이너스 요소 */
+    font-weight: bold;
+}
+body{
+    overflow-x: hidden;
+    color: rgb(29,29,31);
+    letter-spacing: -0.05em;
+    /*              em현재폰트의 0.05배 만큼 길이를 좁혀줌 */
+    /* 글자간의 간격 */
+    background-color: whitesmoke;
+}
+
+p{
+    line-height: 1.6;
+}
+
+.first-nav{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 44px;
+    padding: 0 1rem;
+    font-size: 2rem;
+    /*     상하 좌우 */
+    /*상과 하는 0으로 설정하고 좌랑 우는 1rem을 줌. */
+    /* 현재 폰트의 배수 만큼  */
+    border-bottom: 1px solid lightgray ;
+
+}
+.fnav-div,/* gloval */
+.snav-div{/* local */
+    align-items: center;
+    display: flex;
+    /* 반응형 웹에서 커지고 작아지고가 가능하게함. */
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.fnav-div{
+    justify-content: space-between;
+    /* 글자들을 가운데 정렬 시켜주고 웹을 작게하면 알아서 가운데정렬됨 */
+}
+.snav-div .snav-div-a{
+    font-size: 1.4rem;
+    margin-right: auto;
+}
+.second-nav{
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    left: 0px;
+    height: 52px;
+    border-bottom: 1px solid wheat;
+    padding: 0 1rem;
+
+}
+
+.snav-div a:not(.snav-div-a){
+    margin-left: 2rem;
+}
+
+.scroll-section{
+    border:  1px red solid;
+    padding-top: 50vh;
+}
+
+#scroll-section-0 h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.main-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    opacity: 0;
+
+    /* opacity: 0; */
+    top: 35vh; /* vh 당장 보이는 화면에서 떨어지는 정도 */
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+.main-message p{
+line-height: 1.5;
+font-weight: bold;
+text-align: center;
+}
+
+.description{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    color: lightgray;
+}
+
+.description strong{
+    float: left;
+    font-size: 3rem;
+    margin-right: 0.2rem;
+    color: black;
+}
+
+.footer{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 7rem;
+background-color: lavender;
+color: black;
+font-size: 2rem;
+}
+
+.sticky-elem{
+   
+    position: fixed;
+    left: 0px;
+    width: 100%;
+}
+
+@media (min-width: 1024px){
+    #scroll-section-0 h1{
+        font-size: 9vw;
+    }
+    .main-message{
+        font-size: 4vw;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    .description strong{
+        font-size: 4rem;
+    }
+
+    /* yoffset 현재 스크롤 위치 */
+}
